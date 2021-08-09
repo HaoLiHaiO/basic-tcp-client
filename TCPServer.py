@@ -6,16 +6,16 @@ serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # host='192.168.1.22'
 host = socket.gethostname()
-port = 5000
-
-serversocket.bind(('192.168.1.22', port))
+port = 3300
+print(host)
+serversocket.bind((host, port))
 
 serversocket.listen(3)
 
 while True:
-    clientsocket, address = serversocket.accept()
+    clientsocket,address = serversocket.accept()
 
-    print("Connection received from %s " % str(address))
+    print("Connection received from %s " %str(address))
 
     message = 'Thank you for connecting to the server. Test data.' + '\r\n'
     clientsocket.send(message.encode('ascii'))

@@ -6,8 +6,8 @@ clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # host = '192.168.1.22'
 host = socket.gethostname()
-port = 5000
-
+port = 3300
+print(host)
 clientsocket.connect((host, port))
 
 # max amount of data client accepts at once
