@@ -6,8 +6,7 @@ serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # host='192.168.1.22'
 host = socket.gethostname()
-port = 3300
-print(host)
+port = 50000
 serversocket.bind((host, port))
 
 serversocket.listen(3)
